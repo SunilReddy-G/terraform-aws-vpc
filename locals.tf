@@ -11,4 +11,11 @@ locals {
                         },
                         var.vpc_tags
                         )
+  igw_tags = merge(
+                local.common_tags,
+                {
+                    name = "${var.project}-${var.environment}"
+                },
+                var.igw_tags
+  )
 }
