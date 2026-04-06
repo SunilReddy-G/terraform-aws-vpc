@@ -14,7 +14,10 @@ variable "vpc_cidr" {
 
 variable "vpc_tags" {
   type = map
-  default = {
-    "name" = false
-  }
+  default = {}
+}
+
+variable "igw_tags" {
+  type = map
+  default = {}
 }
